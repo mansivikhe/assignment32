@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            border: 1px solid Maroon;
+            border-radius: 20px;
+            display: block;
+            margin: 100px auto;
+            background-color: #ffcccc;
+        }
+
+        .img-dice {
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+
+        }
+
+        .btn {
+            background-color: Maroon;
+            color: white;
+            display: block;
+            margin: 20px auto;
+            font-size: 20px;
+            padding: 10px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .text-center {
+            text-align: center;
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Dice Roller</h1>
+        <img src="one.png" class="img-dice" id="img-dice">
+        <button class="btn" onclick="rolldice()">Press</button>
+    </div>
+    <script>
+        function rolldice() {
+            const min = 1;
+            const max = 6;
+            const random = Math.round(Math.random() * (max - min)) + min;
+
+            const diceimg = document.getElementById('img-dice');
+            if (random == 1) {
+                diceimg.src = 'one.png';
+            }
+            else if (random == 2) {
+                diceimg.src = 'two.png';
+            } else if (random == 3) {
+                diceimg.src = 'three.png';
+            } else if (random == 4) {
+                diceimg.src = 'four.png';
+            } else if (random == 5) {
+                diceimg.src = 'five.png';
+            } else if (random == 6) {
+                diceimg.src = 'six.png';
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
